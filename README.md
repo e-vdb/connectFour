@@ -1,2 +1,3 @@
-# connectFour
+# Connect Four
 
+In development
