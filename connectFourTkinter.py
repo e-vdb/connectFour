@@ -11,6 +11,9 @@ import numpy as np
 ROW_COUNT = 6
 COLUMN_COUNT = 7
 
+WIDTH=50
+LENGTH=40
+
 def create_board():
     board=np.zeros((6,7))
     return board
@@ -24,16 +27,8 @@ def find_row(board,col):
             return row
 
 def drop_piece(board,row,col,piece):
-    board[row][col]= piece
-    
-
-def play(board,player,color):
-    print("Player {}, Choose a column (0-6)".format(player))
-    col = int(input())
-    if valid_move(board,col):
-            row = find_row(board, col)
-            drop_piece(board,row,col,player)
-            can.create_oval(100+col*30,250-row*30,120+col*30,270-row*30,fill=color,outline='white')
+    board[row][col]= piece          
+            
 def winner(board,player):
     # check for 4 in horizontal direction
     for row in range(ROW_COUNT):
@@ -66,7 +61,7 @@ def game():
     turn=0
     for i in range(ROW_COUNT):
         for j in range(COLUMN_COUNT):
-            can.create_oval(100+30*j,100+30*i,120+30*j,120+30*i,outline='white')
+            can.create_oval(100+WIDTH*j,100+WIDTH*i,100+LENGTH+WIDTH*j,100+LENGTH+WIDTH*i,outline='white')
     message.configure(text='player 1')
         
 
@@ -84,7 +79,8 @@ def draw(board,col):
         if valid_move(board,col):
             row = find_row(board, col)
             drop_piece(board,row,col,player)
-            can.create_oval(100+col*30,250-row*30,120+col*30,270-row*30,fill=color,outline='white')
+            #can.create_oval(100+col*30,250-row*30,120+col*30,270-row*30,fill=color,outline='white')
+            can.create_oval(100+col*WIDTH,100+(ROW_COUNT-1)*WIDTH-row*WIDTH,100+LENGTH+col*WIDTH,100+(ROW_COUNT-1)*WIDTH+LENGTH-row*WIDTH,fill=color,outline='white')
             if winner(board,player):
                 game_over=True  
                 print("Winner")
@@ -115,8 +111,5 @@ game()
 buttons=[tk.Button(window,text=i,command=lambda x=i:draw(board,x)) for i in range(COLUMN_COUNT)]
 for col in range(COLUMN_COUNT):
     buttons[col].pack(side=tk.LEFT)
-
-
-
 
 window.mainloop()
