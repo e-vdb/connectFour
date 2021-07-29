@@ -1,0 +1,15 @@
+GAME RULES
+
+- The first player drops red piece.
+- The second player drops yellow piece.
+- Each player drops a piece in turn.
+- The first player that aligns four pieces 
+(horizontally, vertically or diagonally) wins.
+
+GAMEPLAY
+- Choose the column (from 0 to 6) where you want to drop
+ your piece and click on the corresponding button.
+
+
+
+
