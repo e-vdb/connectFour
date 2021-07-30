@@ -15,3 +15,8 @@ To play the game, save the following files in the same directory.
 * connectFour.py : Python 3 script
 * rules_eng.txt : plain text document that contains the rules of the game
 
+
+## Example of game
+
+![game](https://user-images.githubusercontent.com/82372483/127654317-de8c408a-91fe-4204-8e7e-3508ce07e2ed.png)
+
