@@ -19,6 +19,11 @@ To play the game, save the following files in the same directory.
 
 ## Tkinter interface
 
+### Interface
+
+![gui](https://user-images.githubusercontent.com/82372483/127779556-6e78ca07-1b2f-41b1-a58b-6f4bafc07a66.png)
+
+
 ### Rules
 
 The rules of connect four can be displayed thanks to the menu Rules from the GUI.
