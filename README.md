@@ -2,11 +2,13 @@
 
 ## Summary
 
-Connect four game for two players.
+Connect four game for two human players.
 
 Code written in python3 with graphics user interface (GUI) using Tkinter.
 
 ## Connect Four
+
+Connect four is a two-players game.
 
 To learn more about this game, visit https://en.wikipedia.org/wiki/Connect_Four
 
