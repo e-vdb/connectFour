@@ -23,8 +23,10 @@ To play the game, save the following files in the same directory.
 
 ### Interface
 
-![gui](https://user-images.githubusercontent.com/82372483/127779556-6e78ca07-1b2f-41b1-a58b-6f4bafc07a66.png)
+Board 7 x 6.
+Buttons (from 0 to 6) to select the column.
 
+![gui](https://user-images.githubusercontent.com/82372483/128048312-3867d326-2bca-4de3-91f5-6e9a95ed696b.png)
 
 ### Rules
 
