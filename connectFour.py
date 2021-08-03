@@ -136,5 +136,7 @@ board=create_board()
 buttons=[tk.Button(window,text=i,command=lambda x=i:draw(board,x)) for i in range(COLUMN_COUNT)]
 for col in range(COLUMN_COUNT):
     buttons[col].pack(side=tk.LEFT)
-
+for i in range(ROW_COUNT):
+        for j in range(COLUMN_COUNT):
+            can.create_oval(10+WIDTH*j,10+WIDTH*i,10+LENGTH+WIDTH*j,10+LENGTH+WIDTH*i,outline='white')
 window.mainloop()
