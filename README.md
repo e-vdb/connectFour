@@ -2,7 +2,7 @@
 
 ## Summary
 
-Connect four game for two human players.
+Connect four game for two human players or one human player against IA.
 
 Code written in python3 with graphics user interface (GUI) using Tkinter.
 
@@ -35,4 +35,11 @@ The rules of connect four can be displayed thanks to the menu Rules from the GUI
 ## Example of game
 
 ![game](https://user-images.githubusercontent.com/82372483/127654317-de8c408a-91fe-4204-8e7e-3508ce07e2ed.png)
+
+## Game mode
+### One human player
+Play against IA.
+
+### Two human players
+Play with a friend.
 
