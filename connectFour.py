@@ -8,13 +8,14 @@ Created on Sat Jul 24 16:02:49 2021
 import tkinter as tk
 import numpy as np
 import random
-from time import sleep
+
 ROW_COUNT = 6
 COLUMN_COUNT = 7
 WIDTH=50
 LENGTH=40
 listMessage=['Begin a new game','Player 1 wins','Player 2 wins']
 onePlayer=True
+
 def create_board():
     board=np.zeros((6,7))
     return board
