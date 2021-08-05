@@ -2,7 +2,7 @@
 
 ## Summary
 
-Connect four game for two human players or one human player against IA.
+Connect four game for two human players or one human player against AI player.
 
 Code written in python3 with graphics user interface (GUI) using Tkinter.
 
