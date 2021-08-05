@@ -38,7 +38,10 @@ The rules of connect four can be displayed thanks to the menu Rules from the GUI
 
 ## Game mode
 ### One human player
-Play against IA.
+Play against AI.
+
+AI gaming mode:
+* The AI chooses randomly a column
 
 ### Two human players
 Play with a friend.
