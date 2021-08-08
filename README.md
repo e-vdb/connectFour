@@ -37,6 +37,9 @@ The rules of connect four can be displayed thanks to the menu Rules from the GUI
 ![game](https://user-images.githubusercontent.com/82372483/127654317-de8c408a-91fe-4204-8e7e-3508ce07e2ed.png)
 
 ### Game mode
+
+From the menu you can start a new game. Two modes are available.
+
 #### One human player
 Play against AI.
 
