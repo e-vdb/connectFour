@@ -10,6 +10,6 @@ GAMEPLAY
 - Choose the column (from 0 to 6) where you want to drop
  your piece and click on the corresponding button.
 
-
-
-
+GAME MODE versus AI
+- Human player = player 1 (red)
+- AI player = player 2 (yellow)
