@@ -18,6 +18,7 @@ To play the game, save the following files in the same directory.
 
 * connectFour.py : Python 3 script
 * rules_eng.txt : plain text document that contains the rules of the game
+* about.txt : plain text document that contains copyright and license information
 
 ## Tkinter interface
 
@@ -26,15 +27,17 @@ To play the game, save the following files in the same directory.
 Board 7 x 6.
 Buttons (from 0 to 6) to select the column.
 
-![gui](https://user-images.githubusercontent.com/82372483/128048312-3867d326-2bca-4de3-91f5-6e9a95ed696b.png)
+![gui](https://user-images.githubusercontent.com/82372483/132489301-7b09abe0-ba3e-498a-ad08-17ff19a171a5.png)
 
-### Rules
 
-The rules of connect four can be displayed thanks to the menu Rules from the GUI.
+### Help
+
+From the GUI you can read How to play? as well as copyright and license information.
 
 ### Example of game
 
-![game](https://user-images.githubusercontent.com/82372483/127654317-de8c408a-91fe-4204-8e7e-3508ce07e2ed.png)
+![game](https://user-images.githubusercontent.com/82372483/132489329-6cbbd0ee-1b02-4155-a9b3-cfca7392825d.png)
+
 
 ### Game mode
 
