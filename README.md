@@ -46,8 +46,12 @@ From the menu you can start a new game. Two modes are available.
 #### One human player
 Play against AI.
 
-AI gaming mode:
-* The AI chooses randomly a column
+Two difficulty levels
+* Easy : The AI chooses randomly a column among allowed moves
+* Intermediate : The AI chooses a column among allowed moves foolowing 
+   *  valid move that makes AI win
+   *  valid move that makes human win
+   *  random move
 
 #### Two human players
 Play with a friend.
