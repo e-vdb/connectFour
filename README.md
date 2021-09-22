@@ -44,11 +44,10 @@ From the GUI you can read How to play? as well as copyright and license informat
 From the menu you can start a new game. Two modes are available.
 
 #### One human player
-Play against AI.
+Play against AI and choose the difficulty level.
 
-Two difficulty levels
 * Easy : The AI chooses randomly a column among allowed moves
-* Intermediate : The AI chooses a column among allowed moves foolowing 
+* Intermediate : The AI chooses a column among allowed moves following
    *  valid move that makes AI win
    *  valid move that makes human win
    *  random move
