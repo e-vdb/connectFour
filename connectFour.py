@@ -16,6 +16,7 @@ LENGTH=40
 listMessage=['Click on Game to start a new game',
              'Player 1 wins. Click on Game to start a new game',
              'Player 2 wins. Click on Game to start a new game']
+difficulty_AI=1
 onePlayer=True
 def create_board():
     board=np.zeros((6,7))
@@ -32,6 +33,16 @@ def find_row(board,col):
 def drop_piece(board,row,col,piece):
     board[row][col]= piece          
             
+def check_winning_move(board,col,player):
+    row = find_row(board, col)
+    next_grid=board.copy()
+    drop_piece(next_grid,row,col,player)
+    if(winner(next_grid,player)):
+        return True
+    else:
+        return False
+    
+
 def winner(board,player):
     # check for 4 in horizontal direction
     for row in range(ROW_COUNT):
@@ -59,6 +70,14 @@ def mode_1HumanPlayer():
     global onePlayer
     onePlayer=True
     game()
+
+def difficulty_easy():
+    global difficulty_AI
+    difficulty_AI=0
+
+def difficulty_intermediate():
+    global difficulty_AI
+    difficulty_AI=1
 
 def mode_2HumanPlayers():
     global onePlayer
@@ -97,11 +116,31 @@ def draw(board,col):
                 message.configure(text=listMessage[player])
     window.after(500,nextPlayer)
 
+# Selects random valid column
+def random_AI(board):
+    valid_moves = [col for col in range(COLUMN_COUNT) if board[ROW_COUNT-1][col] == 0]
+    return random.choice(valid_moves)
+
+
+def smart_AI(board):
+    valid_moves = [col for col in range(COLUMN_COUNT) if board[ROW_COUNT-1][col] == 0]
+    for col in valid_moves:
+        if check_winning_move(board,col,2):
+            return col
+    for col in valid_moves:
+        if check_winning_move(board,col,1):
+            return col  
+    return random.choice(valid_moves)
+
+
 def nextPlayer():
-    global turn
+    global turn,difficulty_AI
     turn+=1
     if onePlayer and turn%2!=0 and not game_over:
-        idCol=random.randint(0,6)
+        if difficulty_AI == 0:
+            idCol=random_AI(board)
+        elif difficulty_AI == 1:
+            idCol=smart_AI(board)
         draw(board,idCol)
         
 ############################################################################
@@ -155,6 +194,12 @@ jeu.add_cascade(label='New Game', menu=submenu)
 submenu.add_command(label='Versus AI', command=mode_1HumanPlayer)
 submenu.add_command(label='2 players', command=mode_2HumanPlayers)
 jeu.add_command(label='Exit',command=window.destroy)
+
+settingsMenu = tk.Menu(top,tearoff=False)
+settings_subMenu=tk.Menu(settingsMenu,tearoff=False)
+settingsMenu.add_cascade(label='Difficulty', menu=settings_subMenu)
+settings_subMenu.add_command(label='Easy',command=difficulty_easy)
+settings_subMenu.add_command(label='Intermediate',command=difficulty_intermediate)
 helpMenu = tk.Menu(top, tearoff=False)
 top.add_cascade(label='Help', menu=helpMenu)
 helpMenu.add_command(label='How to play?',command=printRules)
