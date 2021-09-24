@@ -27,8 +27,7 @@ To play the game, save the following files in the same directory.
 Board 7 x 6.
 Buttons (from 0 to 6) to select the column.
 
-![gui](https://user-images.githubusercontent.com/82372483/132489301-7b09abe0-ba3e-498a-ad08-17ff19a171a5.png)
-
+![gui](https://user-images.githubusercontent.com/82372483/134669717-dd738288-efd9-4c5e-bcd4-33277eabeae5.png)
 
 ### Help
 
@@ -36,15 +35,14 @@ From the GUI you can read How to play? as well as copyright and license informat
 
 ### Example of game
 
-![game](https://user-images.githubusercontent.com/82372483/132489329-6cbbd0ee-1b02-4155-a9b3-cfca7392825d.png)
-
+![game](https://user-images.githubusercontent.com/82372483/134669778-8fd9c399-0322-426f-977a-08ee00de85c4.png)
 
 ### Game mode
 
 From the menu you can start a new game. Two modes are available.
 
 #### One human player
-Play against AI and choose the difficulty level.
+Play against AI. You can change the difficulty level thanks to *Difficulty* menu.
 
 * Easy : The AI chooses randomly a column among allowed moves
 * Intermediate : The AI chooses a column among allowed moves following
