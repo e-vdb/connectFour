@@ -49,6 +49,7 @@ Play against AI. You can change the difficulty level thanks to *Difficulty* menu
    *  valid move that makes AI win
    *  valid move that makes human win
    *  random move
+* Difficult : TO BE IMPLEMENTED 
 
 #### Two human players
 Play with a friend.
