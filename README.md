@@ -54,3 +54,5 @@ Play against AI. You can change the difficulty level thanks to *Difficulty* menu
 #### Two human players
 Play with a friend.
 
+## TASK LIST
+- [ ] Implement difficult AI level
