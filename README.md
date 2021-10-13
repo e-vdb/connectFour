@@ -55,4 +55,5 @@ Play against AI. You can change the difficulty level thanks to *Difficulty* menu
 Play with a friend.
 
 ## TASK LIST
-- [ ] Implement difficult AI level
+- [ ] Documenting code
+- [ ] Implementing difficult AI level
