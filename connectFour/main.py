@@ -7,7 +7,6 @@ Created on Sat Jul 24 16:02:49 2021
 """
 
 import tkinter as tk
-import numpy as np
 import random
 from help_GUI import about, print_rules
 from connectFour import create_board, valid_move
