@@ -10,6 +10,7 @@ import tkinter as tk
 import numpy as np
 import random
 from help_GUI import about, print_rules
+from connectFour import create_board, valid_move
 
 
 ROW_COUNT = 6
@@ -21,12 +22,10 @@ listMessage=['Click on Game to start a new game',
              'Player 2 wins. Click on Game to start a new game']
 difficulty_AI = 1
 onePlayer = True
-def create_board():
-    board=np.zeros((6,7))
-    return board
 
-def valid_move(board,col):
-    return board[5][col] == 0
+
+
+
 
 def find_row(board,col):
     for row in range(ROW_COUNT):
