@@ -20,10 +20,42 @@ def create_board() -> None:
     board=np.zeros((ROW_COUNT, COLUMN_COUNT))
     return board
 
-def valid_move(board, col):
+def valid_move(board, col) -> bool :
+    """
+    Check whether the column chosen by the player is free?
+
+    Parameters
+    ----------
+    board : TYPE
+        DESCRIPTION.
+    col : TYPE
+        DESCRIPTION.
+
+    Returns
+    -------
+    boolean
+        DESCRIPTION.
+
+    """
     return board[ROW_COUNT-1][col] == 0
 
 def find_row(board, col) -> int:
+    """
+    Return the row number that can be played for a given column.
+
+    Parameters
+    ----------
+    board : np.array
+        Connect four board.
+    col : int64
+        Column number chosen by the player.
+
+    Returns
+    -------
+    int
+        Row number that can be played.
+
+    """
     for row in range(ROW_COUNT):
         if board[row][col]==0:
             return row
