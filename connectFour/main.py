@@ -24,22 +24,54 @@ difficulty_AI = 1
 onePlayer = True
 
 
-def mode_1HumanPlayer():
+def mode_1HumanPlayer() -> None:
+    """
+    Lauch game for one human player versus AI.
+
+    Returns
+    -------
+    None.
+
+    """
     global onePlayer
-    onePlayer=True
+    onePlayer = True
     game()
 
-def difficulty_easy():
+def difficulty_easy() -> None:
+    """
+    Set the AI-difficulty level to easy.
+
+    Returns
+    -------
+    None.
+
+    """
     global difficulty_AI
-    difficulty_AI=0
+    difficulty_AI = 0
 
 def difficulty_intermediate():
-    global difficulty_AI
-    difficulty_AI=1
+    """
+    Set the AI-difficulty level to intermediate.
 
-def mode_2HumanPlayers():
+    Returns
+    -------
+    None.
+
+    """
+    global difficulty_AI
+    difficulty_AI = 1
+
+def mode_2HumanPlayers() -> None:
+    """
+    Lauch game for two human players.
+
+    Returns
+    -------
+    None.
+
+    """
     global onePlayer
-    onePlayer=False
+    onePlayer = False
     game()
 
 def game():
