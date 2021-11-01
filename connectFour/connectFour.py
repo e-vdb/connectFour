@@ -22,19 +22,19 @@ def create_board() -> None:
 
 def valid_move(board, col) -> bool :
     """
-    Check whether the column chosen by the player is free?
+    Check whether the column chosen by the player is free.
 
     Parameters
     ----------
-    board : TYPE
-        DESCRIPTION.
-    col : TYPE
-        DESCRIPTION.
+    board : np.array
+        Connect four board.
+    col : int64
+        Column number in the board (included between 0 and COLUMN_COUNT).
 
     Returns
     -------
-    boolean
-        DESCRIPTION.
+    bool
+        True whether the column is free, False otherwise.
 
     """
     return board[ROW_COUNT-1][col] == 0
@@ -82,16 +82,51 @@ def drop_piece(board, row, col, piece) -> None:
     """
     board[row][col] = piece  
 
-def check_winning_move(board,col,player):
+def check_winning_move(board,col,player) -> bool:
+    """
+    For a given column, find the row and check whether the player wins or not.
+
+    Parameters
+    ----------
+    board : np.array
+        Board of the connect four game.
+    col : int64
+        Column number in the board (included between 0 and COLUMN_COUNT).
+    player : int64
+        Number to represent the player (1 or 2).
+
+    Returns
+    -------
+    bool
+        True wheter the next move is a winning one.
+        False otherwise.
+
+    """
     row = find_row(board, col)
-    next_grid=board.copy()
-    drop_piece(next_grid,row,col,player)
-    if(winner(next_grid,player)):
+    next_grid = board.copy()
+    drop_piece(next_grid, row,col, player)
+    if(winner(next_grid, player)):
         return True
     else:
         return False
 
-def winner(board,player):
+def winner(board, player) -> bool:
+    """
+    Check for 4 in horizontal, vertigal and both diagonal directions.
+
+    Parameters
+    ----------
+    board : np.array
+        Board of the connect four game.
+    player : int64
+        Number to represent the player (1 or 2).
+
+    Returns
+    -------
+    bool
+        True if it has found 4 and False otherwise.
+
+    """
     # check for 4 in horizontal direction
     for row in range(ROW_COUNT):
         for col in range(COLUMN_COUNT-3):
