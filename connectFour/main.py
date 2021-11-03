@@ -7,10 +7,10 @@ Created on Sat Jul 24 16:02:49 2021
 """
 
 import tkinter as tk
-import random
 from help_GUI import about, print_rules
 from connectFour import create_board, valid_move
-from connectFour import find_row, drop_piece, check_winning_move, winner
+from connectFour import find_row, drop_piece, winner
+from strategyAI import smart_AI, random_AI
 
 
 ROW_COUNT = 6
@@ -106,21 +106,8 @@ def draw(board,col):
                 message.configure(text=listMessage[player])
     window.after(500,nextPlayer)
 
-# Selects random valid column
-def random_AI(board):
-    valid_moves = [col for col in range(COLUMN_COUNT) if board[ROW_COUNT-1][col] == 0]
-    return random.choice(valid_moves)
 
 
-def smart_AI(board):
-    valid_moves = [col for col in range(COLUMN_COUNT) if board[ROW_COUNT-1][col] == 0]
-    for col in valid_moves:
-        if check_winning_move(board,col,2):
-            return col
-    for col in valid_moves:
-        if check_winning_move(board,col,1):
-            return col  
-    return random.choice(valid_moves)
 
 
 def nextPlayer():
