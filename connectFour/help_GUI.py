@@ -1,5 +1,5 @@
 """
-Define for the Menu Help.
+Define functions for the Menu Help.
 
 @author: Emeline
 """
@@ -10,7 +10,6 @@ def print_rules() -> None:
     """
     Load a text files 'rules_eng.txt' saved inside the same directory.
     Open a second window.
-    
 
     Returns
     -------
@@ -27,10 +26,9 @@ def print_rules() -> None:
     ruleWindow.resizable(0,0)
     ruleWindow.mainloop()
 
-
 def about() -> None:
     """
-    Load the text document about.txt.
+    Load the text document 'about.txt'.
     Open a secondary window.
     Write the content of the text document.
 
