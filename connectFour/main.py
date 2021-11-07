@@ -75,11 +75,20 @@ def mode_2HumanPlayers() -> None:
     game()
 
 def game():
-    global can,turn,game_over,board,message
+    """
+    Reset all to start a new game.
+
+    Returns
+    -------
+    None.
+
+    """
+    global can, turn, game_over, board, message
+    # Delete all canvas content.
     can.delete(tk.ALL)
     board=create_board()
-    game_over=False
-    turn=0
+    game_over = False
+    turn = 0
     for i in range(ROW_COUNT):
         for j in range(COLUMN_COUNT):
             can.create_oval(10+WIDTH*j,10+WIDTH*i,10+LENGTH+WIDTH*j,10+LENGTH+WIDTH*i,outline='white')
@@ -110,14 +119,24 @@ def draw(board,col):
 
 
 
-def nextPlayer():
+def nextPlayer() -> None:
+    """
+    Increment the turn to switch players.
+    
+
+    Returns
+    -------
+    None.
+
+    """
     global turn,difficulty_AI
     turn+=1
+    # In versus AI mode only
     if onePlayer and turn%2!=0 and not game_over:
         if difficulty_AI == 0:
-            idCol=random_AI(board)
+            idCol = random_AI(board)
         elif difficulty_AI == 1:
-            idCol=smart_AI(board)
+            idCol = smart_AI(board)
         draw(board,idCol)
         
 
