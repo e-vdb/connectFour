@@ -9,12 +9,6 @@ from game_class import Game
 
 ROW_COUNT = 6
 COLUMN_COUNT = 7
-WIDTH = 50
-LENGTH = 40
-listMessage=['Click on Game to start a new game',
-             'Player 1 wins. Click on Game to start a new game',
-             'Player 2 wins. Click on Game to start a new game']
-
         
 ############################################################################
 # Graphics window
